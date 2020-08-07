@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Rsocket client project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon Pascal",
+  "license": "ISC",
+  "dependencies": {
+    "fbjs": "^2.0.0",
+    "rsocket-core": "0.0.19",
+    "rsocket-flowable": "0.0.14",
+    "rsocket-tcp-server": "0.0.19",
+    "rsocket-types": "0.0.16",
+    "rsocket-websocket-client": "0.0.19",
+    "rsocket-websocket-server": "0.0.19",
+    "ws": "^7.3.1"
+  }
+}
