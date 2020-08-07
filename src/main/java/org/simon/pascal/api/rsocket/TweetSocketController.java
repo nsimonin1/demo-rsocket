@@ -2,6 +2,7 @@ package org.simon.pascal.api.rsocket;
 
 import org.simon.pascal.domain.Tweet;
 import org.simon.pascal.domain.TweetRequest;
+import org.simon.pascal.service.TweetInMemoryService;
 import org.simon.pascal.service.TweetService;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,7 @@ public class TweetSocketController {
 
     private final TweetService tweetService;
 
-    public TweetSocketController(TweetService tweetService) {
+    public TweetSocketController(TweetInMemoryService tweetService) {
         this.tweetService = tweetService;
     }
 

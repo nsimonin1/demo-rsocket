@@ -2,7 +2,7 @@ package org.simon.pascal.api.rest;
 
 import org.simon.pascal.domain.Tweet;
 import org.simon.pascal.domain.TweetRequest;
-import org.simon.pascal.service.TweetService;
+import org.simon.pascal.service.TweetInMemoryService;
 import org.springframework.http.MediaType;
 import org.springframework.messaging.rsocket.RSocketRequester;
 import org.springframework.stereotype.Controller;
@@ -14,10 +14,10 @@ import reactor.core.publisher.Mono;
 @Controller
 public class TweetController {
 
-    private final TweetService tweetService;
+    private final TweetInMemoryService tweetService;
     private final Mono<RSocketRequester> requester;
 
-    public TweetController(TweetService tweetService, Mono<RSocketRequester> requester) {
+    public TweetController(TweetInMemoryService tweetService, Mono<RSocketRequester> requester) {
         this.tweetService = tweetService;
         this.requester = requester;
     }
